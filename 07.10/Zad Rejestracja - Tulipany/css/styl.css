@@ -1,0 +1,56 @@
+* {
+	font-family: Cambria;
+}
+header {
+	background-color: #c2185b;
+	color: #fff;
+	text-align: center;
+	padding: 15px;
+}
+main {
+	height: 450px;
+	background-image: url("../rozmycie.png");
+}
+footer section {
+	background-color: #c2185b;
+	color: #fff;
+	width: 25%;
+	height: 240px;
+}
+footer {
+	display: flex;
+}
+main section {
+	display: inline-block;
+	background-color: #fce4ec;
+	width: 25%;
+	height: 300px;
+	margin: 25px;
+	padding: 16px;
+}
+.none {
+	opacity: 0;
+}
+p {
+	padding-top: 20px;
+}
+a {
+	color: #fff;
+}
+input {
+	width: 80%;
+	height: 30px;
+	margin: 10px;
+}
+button {
+	background-color: #c2185b;
+	color: #fff;
+	margin-top: 50px;
+	margin-left: 60%;
+	padding: 20px;
+	border: none;
+}
+video {
+	height: 100%;
+	width: 100%;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia hurtowe</title>
+    <!-- <link rel="stylesheet" href="styl4.css"> -->
+    <style>
+        * {
+            font-family: 'Verdana';
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: darkgreen;
+            color: white;
+            padding: 5px;
+        }
+
+        #lewy {
+            background: palegreen;
+            width: 30%;
+            height: 500px;
+            float: left;
+        }
+
+        #prawy {
+            background: honeydew;
+            width: 70%;
+            height: 500px;
+            padding-top: 100px;
+            float: left;
+        }
+
+        footer {
+            clear: both;
+            background: palegreen;
+            padding: 3px;
+        }
+
+        table,
+        td {
+            border: 1px solid darkgreen;
+            border-collapse: collapse;
+        }
+
+        table {
+            margin: auto;
+            width: 95%;
+        }
+
+        td,
+        th {
+            padding: 20px 0;
+        }
+
+        button {
+            background: darkgreen;
+            color: white;
+            padding: 5px;
+        }
+
+        button:hover {
+            background: honeydew;
+            color: darkgreen;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sieci komputerowe</h1>
+    </header>
+
+    <div id="lewy">
+        <h2>Aktualizacja i zamówienia materiałów</h2>
+        <p>Do wewnętrznego użytku firmy</p>
+        <img src="" alt="sieć komputerowa">
+    </div>
+
+    <div id="prawy">
+        <table>
+            <tr>
+                <th>Produkt</th>
+                <th>Jednostka</th>
+                <th>Dostępna ilość</th>
+                <th>Aktualizacja</th>
+                <th>Zamówienie</th>
+            </tr>
+            <tr>
+                <td>Skrętka U/UTP drut</td>
+                <td>metr</td>
+                <td class="td-ilosc">0</td>
+                <td><button onclick="aktualizuj(this)">Aktualizuj1</button></td>
+                <td><button onclick="order(this)">Zamów</button></td>
+            </tr>
+            <tr>
+                <td>Skrętka U/UTP linka</td>
+                <td>metr</td>
+                <td class="td-ilosc">2</td>
+                <td><button onclick="aktualizuj(this)">Aktualizuj2</button></td>
+                <td><button onclick="order(this)">Zamów</button></td>
+            </tr>
+            <tr>
+                <td>Wtyki 8P8C</td>
+                <td>sztuki</td>
+                <td class="td-ilosc">10</td>
+                <td><button onclick="aktualizuj(this)">Aktualizuj3</button></td>
+                <td><button onclick="order(this)">Zamów</button></td>
+            </tr>
+            <tr>
+                <td>Moduły Keystone</td>
+                <td>sztuki</td>
+                <td class="td-ilosc">30</td>
+                <td><button onclick="aktualizuj(this)">Aktualizuj4</button></td>
+                <td><button onclick="order(this)">Zamów</button></td>
+            </tr>
+        </table><br>
+        <!-- <button onclick="zmienKolor();">Zmień kolory</button> -->
+    </div>
+
+    <footer>
+        <a href="http://sieci.pl/" target="_blank">Nasza strona internetowa</a>
+        <p>Stronę przygotował: 1234</p>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

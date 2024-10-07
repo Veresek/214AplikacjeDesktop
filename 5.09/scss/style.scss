@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Rubik", sans-serif;
+	background-color: rgb(250, 238, 219);
+}
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+}
+div {
+	text-align: center;
+	padding: 100px;
+	border-radius: 10px;
+	background-color: rgb(253, 224, 189);
+}

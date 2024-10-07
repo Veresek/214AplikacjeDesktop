@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styl4.css">
+    <title>Zamówienia hurtowe</title>
+</head>
+
+<body onload="braki()">
+    <header>
+        <h1>Sieci komputerowe</h1>
+    </header>
+    <main>
+        <section class="left">
+            <h2>Aktualizacja i zamówienia materiałów</h2>
+            <p>Do wewnętrznego użytku firmy</p>
+            <img src="./zadanie/obraz.png" alt="sieć komputerowa">
+        </section>
+        <section class="right">
+            <table>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Jednostka</th>
+                    <th>Dostępna ilość</th>
+                    <th>Aktualizacja</th>
+                    <th>Zamówienie</th>
+                </tr>
+                <tr>
+                    <td id="nazwa1">Skrętka U/UTP drut</td>
+                    <td id="ilosc1">metr</td>
+                    <td id="update1">20</td>
+                    <td><button onclick="update1()">Aktualizuj</button></td>
+                    <td><button onclick="order1()">Zamów</button></td>
+                </tr>
+                <tr>
+                    <td id="nazwa2">Skrętka U/UTP linka</td>
+                    <td id="ilosc2">metr</td>
+                    <td id="update2">2</td>
+                    <td><button onclick="update2()">Aktualizuj</button></td>
+                    <td><button onclick="order2()">Zamów</button></td>
+                </tr>
+                <tr>
+                    <td id="nazwa3">Wtyki 8P8C</td>
+                    <td id="ilosc3">sztuki</td>
+                    <td id="update3">10</td>
+                    <td><button onclick="update3()">Aktualizuj</button></td>
+                    <td><button onclick="order3()">Zamów</button></td>
+                </tr>
+                <tr>
+                    <td id="nazwa4">Moduły Keystone</td>
+                    <td id="ilosc4">sztuki</td>
+                    <td id="update4">30</td>
+                    <td><button onclick="update4()">Aktualizuj</button></td>
+                    <td><button onclick="order4()">Zamów</button></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <a href="http://sieci.pl/">Nasza strona internetowa</a>
+        <p>Stronę przygotował: 9</p>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

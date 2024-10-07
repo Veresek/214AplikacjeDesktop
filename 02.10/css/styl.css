@@ -1,0 +1,59 @@
+* {
+	font-family: Georgia;
+	color: #fff;
+}
+header,
+footer {
+	background-color: maroon;
+	text-align: center;
+	padding: 2px;
+}
+section {
+	background-color: lightsalmon;
+	height: 527px;
+}
+section:nth-child(odd) {
+	width: 15%;
+}
+.middle {
+	width: 70%;
+}
+main {
+	display: flex;
+}
+nav {
+	background-color: maroon;
+	height: 70px;
+}
+button {
+	background-color: lightsalmon;
+	color: maroon;
+	border: none;
+	font-size: 400%;
+	display: block;
+	margin: auto;
+	padding-top: 210px;
+}
+nav img {
+	height: 70px;
+	transition: 4s ease-in-out padding-left;
+	padding-left: 50px;
+	animation: 4s navimg forwards;
+}
+@keyframes navimg {
+	from {
+		padding-left: 0px;
+	}
+	to {
+		padding-left: 50px;
+	}
+}
+.middle img {
+	display: block;
+	margin: auto;
+	padding-top: 45px;
+	transition: ease-in-out 5s;
+}
+.middle img:hover {
+	scale: 1.2;
+}

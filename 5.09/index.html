@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="LoadDate()">
+    <section>
+        <div>
+            <h1 id="textdate">DATE:</h1>
+            <br>
+            <h2>Podaj swój rok urodzenia</h2>
+            <input type="date" id="age">
+            <button onclick="calc()">Oblicz</button>
+            <p id="lat">Masz lat</p>
+            <br>
+            <h2>Lokata</h2>
+            <p>Kwota lokaty w zł:</p>
+            <input type="number" id="ile">
+            <button onclick="lokata()">Oblicz zysk</button>
+            <p id="zysk">Zysk z lokaty wynosi</p>
+        </div>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
