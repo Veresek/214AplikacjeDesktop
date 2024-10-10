@@ -12,8 +12,8 @@ const zloteMysli = [
 ];
 const p = document.getElementById("p");
 p.textContent = `Dzisiaj jest czwartek 10 październik 2024`;
+let counter = 0;
 const cos = setInterval(() => {
-	let counter = 0;
 	counter++;
 	let rand = Math.floor(Math.random() * 10);
 	let par = document.createElement("p");
