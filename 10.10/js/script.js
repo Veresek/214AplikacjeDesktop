@@ -1,32 +1,25 @@
-const inputini = document.getElementById("inp");
-const btnA = document.getElementById("A");
-const btnB = document.getElementById("B");
-const btnC = document.getElementById("C");
-const result = document.getElementById("result");
-
-function isreversed(input) {
-	let reversed = "";
-	for (let i = input.length - 1; i >= 0; i--) {
-		reversed += input[i];
+const zloteMysli = [
+	"Największą podróżą jest podróż do samego siebie.",
+	"Szczęście nie jest celem, ale sposobem życia.",
+	"Zmiana zaczyna się od nas samych.",
+	"Najlepsze rzeczy w życiu są darmowe: uśmiech, przyjaźń, miłość.",
+	"Ucz się od wczoraj, żyj dziś, miej nadzieję na jutro.",
+	"Nie bój się porażek, boją się tylko ci, którzy nic nie robią.",
+	"Czas jest najcenniejszym skarbem, którego nie można odzyskać.",
+	"Współczucie jest językiem, który głusi mogą usłyszeć, a niewidomi zobaczyć.",
+	"Mądrość polega nie tylko na wiedzy, ale także na umiejętności jej zastosowania.",
+	"Największym bogactwem jest zdrowie.",
+];
+const p = document.getElementById("p");
+p.textContent = `Dzisiaj jest czwartek 10 październik 2024`;
+const cos = setInterval(() => {
+	let counter = 0;
+	counter++;
+	let rand = Math.floor(Math.random() * 10);
+	let par = document.createElement("p");
+	par.textContent = zloteMysli[rand];
+	document.body.appendChild(par);
+	if (counter == 10) {
+		clearInterval(cos);
 	}
-	return reversed;
-}
-btnA.addEventListener("click", () => {
-	result.textContent = `Wynik: ${isreversed(inputini.value)}`;
-});
-btnB.addEventListener("click", () => {
-	if (inputini.value === isreversed(inputini.value)) {
-		result.textContent = `Wynik: ${inputini.value} jest palindromem`;
-	} else {
-		result.textContent = `Wynik: ${inputini.value} nie jest palindromem`;
-	}
-});
-btnC.addEventListener("click", () => {
-	let counter = 1;
-	for (let i = 0; i < inputini.value.length; i++) {
-		if (inputini.value[i] === " ") {
-			counter++;
-		}
-	}
-	result.textContent = `Wynik: W tym slowie jest ${counter} wyrazow`;
-});
+}, 1000);
