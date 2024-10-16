@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+}
+.container {
+	width: 50vw;
+	margin-top: 50px;
+	padding: 50px 0px;
+	display: inline-block;
+	text-align: center;
+	border: solid white;
+	border-radius: 25px;
+}
+body {
+	background-color: black;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+.answers {
+	margin: auto;
+	border-radius: 20px;
+	padding: 10px 10px;
+	width: 80%;
+	background-color: rgb(78, 78, 78);
+}
+button {
+	padding: 10px 15px;
+}
+input {
+	padding: 10px 15px;
+}
