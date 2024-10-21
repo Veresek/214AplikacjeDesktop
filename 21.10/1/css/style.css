@@ -1,0 +1,13 @@
+button {
+	width: 35px;
+	height: 35px;
+}
+.red {
+	background-color: red;
+}
+.green {
+	background-color: green;
+}
+.blue {
+	background-color: blue;
+}
