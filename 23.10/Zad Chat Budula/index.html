@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="./css/styl.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>Chat Budula</h2>
+        </header>
+        <main>
+            <div id="chat" class="chat">
+                <div class="message jolanta">
+                    <img src="./src/img/Jolka.jpg" alt="Jolanta Nowak">
+                    <p>Cześć idziesz jutro do kina?</p>
+                </div>
+                <div class="message krzysztof">
+                    <img src="./src/img/Krzysiek.jpg" alt="Krzysztof Łukasiński">
+                    <p>Tak! A ty?</p>
+                </div>
+            </div>
+            <div id="send" class="send">
+                <label for="mess">Wpisz wiadomość:</label>
+                <input type="text" id="mess" name="mess">
+                <button id="sendBtn">Wyślij</button>
+                <button id="randomAns">Generuj losową odpowiedź</button>
+            </div>
+        </main>
+        <aside>
+            <h3>Chaty</h3>
+            <ul>
+                <li>Ogólny</li>
+                <li>Tematyczne</li>
+                <ol>
+                    <li>Turystyczny</li>
+                    <li>Żeglarski</li>
+                    <li>Filatelistyczny</li>
+                    <li>Hodowla zwierzątek
+                        domowych</li>
+                </ol>
+            </ul>
+            <h3>Uczestnicy</h3>
+            <p>Jolanta Nowak</p>
+            <img src="./src/img/Jolka.jpg" alt="Jolanta Nowak">
+            <p>Krzysztof Łukasiński</p>
+            <img src="./src/img/Krzysiek.jpg" alt="Krzysztof Łukasiński">
+        </aside>
+        <footer>
+            <h5>Chat wykonał: 09</h5>
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
