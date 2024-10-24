@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metody String</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    #container {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .text {
+      padding: 10px;
+    }
+
+    #inputs {
+      background-color: aqua;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid darkblue;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: coral;
+      padding: 8px;
+      width: 150px;
+      font-weight: 700;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      opacity: 0.7;
+    }
+
+    #answers {
+      text-align: left;
+    }
+
+    h3 {
+      color: darkblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="inputs">
+      <h1>Metody String</h1>
+      <div class="text">
+        <label for="txt1">TEKST 1: </label><input type="text" id="txt1" />
+      </div>
+      <div class="text">
+        <label for="txt2">TEKST 2: </label><input type="text" id="txt2" />
+      </div>
+    </div>
+    <div id="answers">
+      <hr />
+      <h3>
+        Zad1. Po kliknięciu w przycisk "Zad1" powinna pojawiać się pod nim
+        informacja o długości wpisanego TEKST2.
+      </h3>
+      <button type="button" onclick="one()">Zad1</button>
+      <p id="zad1">miejsce na odpowiedź do Zad1</p>
+      <hr />
+      <h3>
+        Zad2. Po kliknięciu w przycisk "Zad2" powinna pojawić się pod nim
+        druga i przedostatnia litera wpisanego tekstu 1.
+      </h3>
+      <button type="button" onclick="two()">Zad2</button>
+      <p id="zad2">miejsce na odpowiedź do Zad2</p>
+      <hr />
+      <h3>
+        Zad3. Po kliknięciu w przycisk "Zad3" powinien pojawić się pod nim
+        tekst 1, ale zaczynający się zawsze małą literą.
+      </h3>
+      <button type="button" onclick="three()">Zad3</button>
+      <p id="zad3">miejsce na odpowiedź do Zad3</p>
+      <hr />
+      <h3>
+        Zad4. Po kliknięciu w przycisk "Zad4" powinien pojawić się pod nim
+        indeks położenia ciągu znaków "PRO"(jeśli taki występuje). Jeśli nie występuje nic się nie pojawia.
+      </h3>
+      <button type="button" onclick="four()">Zad4</button>
+      <p id="zad4">miejsce na odpowiedź do Zad4</p>
+      <hr />
+      <h3>
+        Zad5. Po kliknięciu w przycisk "Zad5" powinny pojawić się pod nim 2
+        pierwsze znaki wpisanego tekstu1.
+      </h3>
+      <button type="button" onclick="five()">Zad5</button>
+      <p id="zad5">miejsce na odpowiedź do Zad5</p>
+      <hr />
+      <h3>
+        Zad6. Po kliknięciu w przycisk "Zad6" powinien pojawić się pod nim
+        tekst z zamienionymi wszystkimi literami "a" na literę "A" (jeśli nie pojawia
+        się litera "a" to nic się nie dzieje).
+      </h3>
+      <button type="button" onclick="six()">Zad6</button>
+      <p id="zad6">miejsce na odpowiedź do Zad6</p>
+      <hr />
+      <h3>
+        Zad7. Po kliknięciu w przycisk "Zad7" powinien pojawić się pod napis
+        "TEKST 1 ZAWIERA W SOBIE TEKST 2" jeżeli tekst 2 występuje w tekst 1, albo
+        "TEKST 1 NIE ZAWIERA W SOBIE TEKST 2" jeżeli tekst 2 nie występuje w tekst
+        1
+      </h3>
+      <button type="button" onclick="seven()">Zad7</button>
+      <p id="zad7">miejsce na odpowiedź do Zad7</p>
+      <hr />
+      <h3>
+        Zad8. Po kliknięciu w przycisk "Zad8" powinna pojawić się pod nim
+        liczba mówiąca ile razy znak 'b' występuje w tekst 1.
+      </h3>
+      <button type="button" onclick="eight()">Zad8</button>
+      <p id="zad8">miejsce na odpowiedź do Zad8</p>
+      <hr />
+      <h3>
+        Zad9. Utwórz kolekcję (o nazwie "allButtonsFromZad9") wszystkich
+        button'ów z div'a o id "zad9". Następnie w pętli dodaj każdemu
+        elementowi nasłuchiwanie na zdarzenie kliknięcia polegające
+        na wywołaniu funkcji anonimowej powodującej dla każdego z button'ów
+        tej kolekcji:
+        <ul>
+          <li>zamianę koloru tła na zielony</li>
+          <li>zamianę koloru czcionki na różowy</li>
+          <li>pogrubienie i podkreślenie czcionki</li>
+        </ul>
+      </h3>
+      <div id="zad9">
+        <button type="button" onclick="nine()">Zad9</button>
+        <button type="button" onclick="nine()">Zad9</button>
+        <button type="button" onclick="nine()">Zad9</button>
+        <button type="button" onclick="nine()">Zad9</button>
+      </div>
+      <hr />
+    </div>
+  </div>
+  <script>
+    let inp1 = document.getElementById("txt1")
+    let inp2 = document.getElementById("txt2")
+    let p = document.querySelectorAll("p")
+    function one() {
+      p[0].innerHTML = inp2.value.length
+    }
+    function two() {
+      p[1].innerHTML = `${inp1.value[1]} ${inp1.value[inp1.value.length - 2]}`
+    }
+    function three() {
+      let firstLet = inp1.value[0].toLowerCase()
+      p[2].innerHTML = `${firstLet}${inp1.value.slice(1)}`
+    }
+    function four() {
+      if (inp1.value.includes("PRO")) {
+        p[3].innerHTML = `${inp1.value.indexOf("PRO")}`
+      }
+    }
+    function five() {
+      p[4].innerHTML = inp1.value.slice(0, 2);
+    }
+    function six() {
+      if (inp1.value.includes("a")) {
+        p[5].innerHTML = inp1.value.replaceAll("a", "A")
+      }
+    }
+    function seven() {
+      if (inp1.value.includes(inp2.value)) {
+        p[6].innerHTML = `TEKST 1 ZAWIERA W SOBIE TEKST 2`
+      } else {
+        p[6].innerHTML = `TEKST 1 NIE ZAWIERA W SOBIE TEKST 2`
+      }
+    }
+    function eight() {
+      let counter = 0;
+      for (let i = 0; i < inp1.value.length; i++) {
+        if (inp1.value[i] == 'b')
+          counter++;
+      }
+      p[7].innerHTML = counter
+    }
+    function nine() {
+      let zad9div = document.getElementById("zad9")
+      let allButtonsFromZad9 = zad9div.querySelectorAll("button")
+      allButtonsFromZad9.forEach(button => {
+        button.addEventListener("click", function () {
+          allButtonsFromZad9.forEach(btn => {
+            btn.style.backgroundColor = "green"
+            btn.style.color = "pink"
+            btn.style.fontWeight = "bold"
+            btn.style.textDecoration = "underline"
+          });
+        })
+      })
+    }
+    nine()
+  </script>
+</body>
+
+</html>
