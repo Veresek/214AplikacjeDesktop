@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty na obrazach</title>
+    <link rel="stylesheet" href="./css/styl.css">
+</head>
+
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <main>
+        <section class="top-left">
+            <img src="img/pszczoła.jpg" alt="pszczoła na żółtym kwiatku">
+            <div>
+                <input type="radio" name="filter" value="blur" checked>
+                <label for="blur">Blur</label>
+            </div>
+            <div>
+                <input type="radio" name="filter" value="sepia">
+                <label for="sepia">Sepia</label>
+            </div>
+            <div>
+                <input type="radio" name="filter" value="negatyw">
+                <label for="negatyw">Negatyw</label>
+            </div>
+            <button id="filterBtn">Zastosuj</button>
+        </section>
+        <section class="top-right">
+            <img src="img/pomarancze.jpg" alt="pomarańcze">
+            <div>
+                <button id="color">Kolorowy</button>
+                <button id="blackWhite">Czarno-biały</button>
+            </div>
+        </section>
+        <section class="bottom-left">
+            <img src="./img/owoce.jpg" alt="kosz pełen owoców">
+            <input type="range" id="range100" value="100">
+            <button id="range100Btn">Zastosuj</button>
+        </section>
+        <section class="bottom-right">
+            <img src="img/zolw.jpg" alt="żółw w wodzie">
+            <input type="range" id="range250" max="250">
+            <button id="range250Btn">Zastosuj</button>
+        </section>
+    </main>
+    <footer>
+        <p><a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a></p>
+        <p>Stronę wykonał: 09</p>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
