@@ -1,0 +1,51 @@
+body {
+	background-color: #333;
+	color: #fff;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+	text-align: center;
+	margin-top: 50px;
+}
+div {
+	background-color: #444;
+	width: 1000px;
+	border-radius: 25px;
+	min-height: 600px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+main {
+	background-color: #555;
+	min-height: 400px;
+	width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 25px;
+	position: relative;
+}
+label,
+input,
+button {
+	margin-top: 50px;
+	display: inline-block;
+	position: absolute;
+	left: 60%;
+	transform: translateX(-50%);
+}
+label {
+	left: 30%;
+}
+button {
+	left: 50%;
+	padding: 10px 20px;
+	margin-top: 100px;
+}
+p {
+	position: absolute;
+	top: 500px;
+	left: 50%;
+	transform: translateX(-50%);
+}
