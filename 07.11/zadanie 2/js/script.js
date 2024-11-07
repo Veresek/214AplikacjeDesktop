@@ -3,15 +3,15 @@ const myCar = {
 	marka: 'Toyota',
 	przebieg: 2500,
 	fajna: false,
-	zmiana: function (wlasciwosc, wartosc) {
-		this[wlasciwosc] = wartosc;
-	},
 };
 //1
 for (let key in myCar) {
 	console.log(key);
 }
 //2
+myCar.zmiana = function (wlasciwosc, wartosc) {
+	this[wlasciwosc] = wartosc;
+};
 myCar.zmiana('model', 'coś');
 console.log(myCar.model);
 //3
