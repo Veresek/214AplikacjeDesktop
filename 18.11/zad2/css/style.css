@@ -1,0 +1,17 @@
+body {
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.dark {
+	color: #fff;
+}
+P {
+	text-align: justify;
+}
+button {
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(212, 0, 255);
+	color: #fff;
+	padding: 10px 20px;
+}
