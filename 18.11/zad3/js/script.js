@@ -1,5 +1,6 @@
 const btn = document.querySelector('button');
 const inp = document.querySelector('input');
+const main = document.querySelector('main');
 if (localStorage.tasks == undefined) {
 	localStorage.tasks = '';
 }
@@ -26,17 +27,16 @@ function createTask(value) {
 	const div = document.createElement('div');
 	const p = document.createElement('p');
 	const btn = document.createElement('button');
-	btn.textContent = 'Usuń';
+	btn.textContent = 'Zrobione';
 	btn.classList = 'delBtn';
 	p.textContent = value;
-	document.body.appendChild(div);
+	main.appendChild(div);
 	div.appendChild(p);
 	div.appendChild(btn);
 	btn.addEventListener('click', () => {
 		tasks = localStorage.tasks.split(',');
 		tasks.splice(tasks.indexOf(value), 1);
 		localStorage.tasks = tasks;
-		localStorage.tasks;
 		div.remove();
 	});
 }
