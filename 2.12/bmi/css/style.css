@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #c2e59c; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#64b3f4,
+		#c2e59c
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#64b3f4,
+		#c2e59c
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main {
+	box-shadow: 0 0 15px black;
+	border-radius: 20px;
+	width: 600px;
+	height: 800px;
+}
+h1 {
+	text-align: center;
+	margin: 20px 0;
+	font-size: 50px;
+}
+label {
+	display: block;
+	margin-left: 20px;
+	font-size: 20px;
+}
+input {
+	display: block;
+	width: 80%;
+	height: 50px;
+	font-size: 25px;
+	margin: 15px auto;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: #cfecdb;
+}
+button {
+	font-size: 36px;
+	background-color: #c2e59c;
+	border-radius: 20px;
+	display: block;
+	width: 80%;
+	height: 100px;
+	margin: 20px auto;
+	cursor: pointer;
+	transition: 0.3s background-color;
+}
+p {
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+}
+#bmi {
+	text-align: left;
+	margin-left: 30px;
+}
+.bmi {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	background-color: #cfecdb;
+	border-radius: 20px;
+	box-shadow: inset 0 0 10px black;
+	width: 80%;
+	height: 100px;
+	margin: 0 auto;
+}
+#weightCond {
+	margin-top: 40px;
+}
+button:hover {
+	background-color: #bcf085;
+}

@@ -1,0 +1,51 @@
+body {
+	background-color: #eee;
+}
+#kontener {
+	margin: auto;
+	width: 1000px;
+	text-align: center;
+}
+#logo,
+nav,
+footer {
+	padding: 10px 0;
+	height: 100px;
+	background-color: #c0c0c0;
+}
+#logo {
+	width: 400px;
+}
+nav {
+	width: 600px;
+}
+header {
+	height: 200px;
+	background-color: #ddd;
+}
+main {
+	margin: 50px;
+}
+footer {
+	text-align: right;
+}
+nav a {
+	margin: 50px;
+	color: #555;
+	font-size: 200%;
+	text-decoration: none;
+}
+hr {
+	background-color: #c0c0c0;
+	width: 70%;
+	height: 2px;
+}
+table {
+	text-align: left;
+}
+.cos {
+	display: flex;
+}
+.imie {
+	text-transform: uppercase;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania JS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="zadanie">
+        <h2>Zadanie:</h2>
+        <details>
+            <summary>Wymagania dotyczące skryptu:</summary>
+            <ul>
+                <li>Wykonywany po stronie przeglądarki, wywoływany przez zdarzenia kliknięcia w miniaturę obrazu,
+                    najechanie kursorem i opuszczenie przez kursor myszy miniatury obrazu</li>
+                <li>Po najechaniu kursorem myszy na dowolną miniaturę podmieniane jest zdjęcie kolorowe na odpowiadające
+                    mu zdjęcie z odcieniami szarości i filtrem, np plik pies1.jpg zamieniany jest na pies1-szary.jpg
+                </li>
+                <li>Po opuszczeniu miniatury przez kursor myszy jest wykonywana odwrotna transformacja – zdjęcie z
+                    odcieniami szarości jest zamieniane na zdjęcie kolorowe, np. plik pies1-szary.jpg zamieniany jest na
+                    pies1.jpg</li>
+                <li>Po kliknięciu na obraz-miniaturę wykonywane są dwie akcje:</li>
+                <ul>
+                    <li>Ta sama, co przy opuszczeniu kursora – podmiana obrazu z odcieniami szarości na kolorowy</li>
+                    <li>Kliknięty obraz jest wyświetlany w panelu prawym – dolnym. Np. jeżeli kliknięto na miniaturkę
+                        pies3.jpg z panelu prawego górnego, to w panelu prawym dolnym jest ładowany obraz pies3.jpg</li>
+                </ul>
+            </ul>
+        </details>
+        <h3 class="center">Wygląd przykładowego rozwiązania:</h3>
+        <img src="./img/zad5.png" alt="przykład rozwiązania" class="image-rozw">
+    </div>
+    <div class="odpowiedz">
+        <!-- MIEJSCE NA ROZWIĄZANIE -->
+        <main>
+            <h1>Wybierz zdjęcie:</h1>
+            <div class="zdjecia">
+                <div class="miniaturki">
+                    <img src="./img/pies1.jpg" alt="pies1">
+                    <img src="./img/pies2.jpg" alt="pies2">
+                    <img src="./img/pies3.jpg" alt="pies3">
+                </div>
+                <div class="glowneZdj">
+                    <img src="./img/pies1.jpg" alt="" id="mainIMG">
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
