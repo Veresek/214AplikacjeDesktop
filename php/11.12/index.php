@@ -12,9 +12,9 @@
         <input type="text" id="num1" name="num1"> <br>
         <label for="num2">Liczba 2 (b):</label>
         <input type="text" id="num2" name="num2"><br>
-        <label for="num3">Liczba 3 (x):</label>
+        <label for="num3">Liczba 3 (c):</label>
         <input type="text" id="num3" name="num3"><br>
-        <label for="num4">Liczba 4 (c):</label>
+        <label for="num4">Liczba 4: &nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input type="text" id="num4" name="num4"><br>
         <input type="submit" name="submit-btn" value="Policz" default="0">
     </form>
@@ -27,7 +27,7 @@
         $num2 = $_POST['num2'];
         $num3 = $_POST['num3'];
         $num4 = $_POST['num4'];
-        $delta = pow($num2,2) - 4*$num1*$num4;
+        $delta = pow($num2,2) - 4*$num1*$num3;
         //Zad1
         if($num1%2 == 0){
             echo "<br>$num1 jest parzysta";
@@ -41,19 +41,27 @@
         echo "<br>Największa liczba to ".max($num1,$num2,$num3,$num4);
         //Zad4
         $liczby3 = [$num1, $num2,$num3];
-        echo "<br>Liczby w kolejności od najwięszej do najmniejszej: ".sort($liczby3);
+        rsort($liczby3);
+        echo "<br>Liczby w kolejności od najwięszej do najmniejszej: ";
+        foreach($liczby3 as $item){
+            echo $item.", ";
+        }
         //Zad5
         $liczby4 = [$num1, $num2,$num3,$num4];
-        echo "<br>Liczby w kolejności od najwięszej do najmniejszej: ".sort($liczby4);
+        rsort($liczby4);
+        echo "<br>Liczby w kolejności od najwięszej do najmniejszej: ";
+        foreach($liczby4 as $item){
+            echo $item.", ";
+        }
         //Zad6
         if($delta > 0){
             $x1 = ((-$num2) - sqrt($delta))/(2*$num1);
             $x2 = ((-$num2) + sqrt($delta))/(2*$num1);;
-            echo "Pierwsze rozwiązanie wynosi $x1 a drugie $x2";
+            echo "<br>Pierwsze rozwiązanie wynosi $x1 a drugie $x2";
         }
         elseif($delta > 0){
             $x = -$num2/(2*$num1);
-            echo "Rozwiązanie to $x";
+            echo "<br>Rozwiązanie to $x";
         }
         else{
             echo "<br> Równanie nie ma rozwiązań";
