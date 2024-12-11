@@ -25,11 +25,8 @@
     // echo ++$num1.'<br>';
     // $result +=5;
     // echo $result;
-
-    <?php
     echo "<h3>Klasa 2PRO</h3>";
     echo "<a href='https://wp.pl' target='_blank'> Link do WP</a>"
-    ?>
     ?>
 </body>
 </html>
