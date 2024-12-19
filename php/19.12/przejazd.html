@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Formularz obliczania kosztu przejazdu</h1>
+    <form action="koszt.php" method="post">
+        <label for="cost">Koszt benzyny (za litr w PLN):</label><br>
+        <input type="text" name="cost"><br>
+        <label for="km">Ilość kilometrow:</label><br>
+        <input type="number" name="km"><br>
+        <label for="avg">Średnie spalanie (1/100km):</label><br>
+        <input type="text" name="avg"><br><br>
+        <input type="submit" value="Oblicz koszt" name="sub">
+    </form>
+</body>
+
+</html>
