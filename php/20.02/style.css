@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+	background-color: #eee;
+}
+.container {
+	text-align: center;
+	background-color: #fff;
+	margin: 200px auto;
+	width: 600px;
+	padding: 20px 40px;
+	border-radius: 10px;
+}
+
+input {
+	margin: 10px auto;
+	display: block;
+	width: 80%;
+}
+button {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	height: 50px;
+	background-color: #0f0;
+	color: #fff;
+}
+ul {
+	text-align: left;
+}
