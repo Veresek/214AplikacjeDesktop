@@ -1,0 +1,51 @@
+body {
+	font-family: 'Garamond';
+}
+header {
+	background-color: saddlebrown;
+	color: #fff;
+	text-align: center;
+	height: 50px;
+}
+h2 {
+	margin-top: 0;
+}
+main {
+	display: flex;
+	flex-direction: row;
+}
+.left {
+	background-color: tan;
+	height: 600px;
+	width: 40vw;
+}
+.top,
+.bottom {
+	background-color: tan;
+	height: 300px;
+	width: 60vw;
+}
+footer {
+	background-color: saddlebrown;
+	color: #fff;
+}
+form {
+	background-color: saddlebrown;
+	color: #fff;
+	padding: 10px 30px;
+	width: 300px;
+}
+input,
+button {
+	margin: 5px;
+}
+p::before {
+	content: 'STATUS: ';
+}
+img {
+	margin-top: 50px;
+}
+span {
+	color: blue;
+	font-weight: bold;
+}
