@@ -11,7 +11,19 @@
         <h1>Dni, miesiące, lata</h1>
     </header>
     <section class="baner">
-        <?php ?>
+        <?php 
+            $conn = mysqli_connect('localhost', 'root', '', 'kalendarz');
+            if (!$conn) {
+                die('Połączenie z bazą nie powiodło się');
+            }
+            $data = date('m-d');
+            $sql = "SELECT imiona FROM imieniny WHERE data = '$data'";
+            $result = mysqli_query($conn, $sql);
+            $imiona = mysqli_fetch_row($result);
+            $dzien = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
+            $dzien = $dzien[date('w')];
+            echo '<p>Dziś jest ' . $dzien . ', ' . date('d-m-Y') . ', imieniny: ' . $imiona[0].'</p>';
+        ?>
     </section>
     <main>
         <section class="left">
@@ -65,26 +77,37 @@
             <h2>Sprawdź kto ma imieniny</h2>
             <form action="kalendarz.php" method="post">
                 <input type="date" name="data" min="2024-01-01" max="2024-12-31" required>
-                <button type="submit">wyślij</button>
+                <button type="submit" name="submit">wyślij</button>
             </form>
-            <?php ?>
+            <?php 
+                if(isset($_POST['submit'])) {
+                    $data = substr($_POST['data'], 5);
+                    $sql = "SELECT imiona FROM imieniny WHERE data = '$data'";
+                    $result = mysqli_query($conn, $sql);
+                    $result = mysqli_fetch_row($result);
+                    $data = date('Y-m-d', strtotime($_POST['data']));
+                    echo "Dnia $data są imieniny: $result[0]";
+                }
+            ?>
         </section>
         <section class="right">
-            <div><a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów" target="_blank"><img src="kalendarz.gif" alt="Kalendarz Majów"></a></div>
-            <div>
+            <a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów" target="_blank"><img src="kalendarz.gif" alt="Kalendarz Majów"></a>
                 <h2>Rodzaje kalendarzy</h2>
                 <ol>
-                    <ul>
-                        <li>Kalendarz Majów</li>
-                        <li>Kalendarz juliański</li>
-                        <li>Kalendarz gregoriański</li>
-                    </ul>
-                    <ul>
-                        <li>Kalendarz starogrecki</li>
-                        <li>babiloński</li>
-                    </ul>
+                    <li>Słoneczny
+                        <ul>
+                            <li>Kalendarz Majów</li>
+                            <li>Juliański</li>
+                            <li>Gregoriański</li>
+                        </ul>
+                    </li>
+                    <li>Księżycowy 
+                        <ul>
+                            <li>Kalendarz starogrecki</li>
+                            <li>babiloński</li>
+                        </ul>
+                    </li>
                 </ol>
-            </div>
         </section>
     </main>
     <footer><p>Stronę opracował: 09</p></footer>
